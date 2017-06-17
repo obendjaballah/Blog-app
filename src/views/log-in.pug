@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+		link(href='css/bootstrap.min.css' type='text/css' rel='stylesheet')
+		link(href='css/bootstrap-theme.min.css' type='text/css' rel='stylesheet')
+		link(href='css/custom.css' type='text/css' rel='stylesheet')
+	body
+		.container
+			.row.centered-form
+				.col-xs-12.col-sm-8.col-md-4.col-sm-offset-2.col-md-offset-4
+					h2.text-center#msg #{message}
+					.panel#pan
+						.panel-heading#panHead
+							h3.panel-title
+								| Please enter your shit to sign in
+						.panel-body#pan1Body
+							form(action="/login", method="post", role='form')
+								.row
+									.col-xs-12.col-sm-12.col-md-12
+										.form-group
+											input#first_name.form-control.input-sm(type='text', name='email', placeholder='Email' value='')
+									.col-xs-12.col-sm-12.col-md-12
+										.form-group
+											input#password.form-control.input-sm(type='password', name='password', placeholder='Password' value='')
+									.col-xs-12.col-sm-12.col-md-12
+										.form-group
+											input#regBtn.btn.btn-block(type='submit', value='Log in')
+									.col-xs-12.col-sm-12.col-md-12
+										p Don't you have an account? <br> <a href='/regaccount' id='signuplink'>SIGN UP now for free</a>
+
+		
+		script(src='/js/jquery.min.js')
+		script(src='/js/bootstrap.min.js')

@@ -1,0 +1,50 @@
+doctype html
+html
+	head
+		link(href='css/bootstrap.min.css' type='text/css' rel='stylesheet')
+		link(href='css/bootstrap-theme.min.css' type='text/css' rel='stylesheet')
+		link(href='css/custom.css' type='text/css' rel='stylesheet')
+	body
+		.container
+			.row
+				.col-xs-12.col-sm-12.col-md-12
+					h1.text-center#name Definitely Not a Blog -Blog
+		.container
+			.col-xs-12.col-sm-8.col-md-6.col-md-push-3
+				.panel#pan
+					.panel-heading#panHead
+						h3.panel-title
+							| Sign up now 
+							small It's free!
+					.panel-body#panBody
+						form(action="/regaccount", method="post", role='form')
+							.row
+								.col-xs-6.col-sm-6.col-md-6
+									.form-group
+										input#first_name.form-control.input-sm(type='text', name='firstname', placeholder='First Name')
+								.col-xs-6.col-sm-6.col-md-6
+									.form-group
+										input#last_name.form-control.input-sm(type='text', name='lastname', placeholder='Last Name')
+								//- .col-xs-12.col-sm-12.col-md-12
+								//- 	.form-group
+								//- 		input#user_name.form-control.input-sm(type='text', name='username', placeholder='User Name')
+								.col-xs-12.col-sm-12.col-md-12
+									.form-group
+										input#email.form-control.input-sm(type='email', name='email', placeholder='Email Address')
+							.row
+								.col-xs-6.col-sm-6.col-md-6
+									.form-group
+										input#password.form-control.input-sm(type='password', name='password', placeholder='Password')
+								.col-xs-6.col-sm-6.col-md-6
+									.form-group
+										input#password_confirmation.form-control.input-sm(type='password', name='password_conf', placeholder='Confirm Password')
+							.row
+								.col-xs-12.col-sm-12.col-md-8
+										p#signinlink Do you have an account? <br> <a href='/login' id='signuplink'>Click here to sign in</a>
+								.col-xs-12.col-sm-12.col-md-4
+									.form-group
+										input#regBtn.btn.btn-block(type='submit', value='Register')
+								
+
+		script(src='/js/jquery.min.js')
+		script(src='/js/bootstrap.min.js')

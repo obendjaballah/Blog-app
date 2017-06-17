@@ -1,0 +1,55 @@
+body{
+	background-image: url('../imgs/img.jpg');
+}
+
+#msg {
+	color: darkred;
+}
+
+#name {
+	color: white;
+}
+
+#regBtn {
+	background-color: #212121;
+	color: white;
+	margin-top:15px;
+}
+
+#pan{
+	margin-top: 120px;
+	border-radius: 10px;
+	border: none;
+
+}
+
+#panBody{
+	background-color: #32634c;
+	border-radius:0px 0px 10px 10px;
+	height: 260px;
+	padding: 50px 25px 50px 25px;
+}
+
+#pan1Body{
+	background-color: #32634c;
+	border-radius:0px 0px 10px 10px;
+	height: 255px;
+	padding: 50px 25px 50px 25px;
+}
+
+#panHead{
+	border-radius: 10px 10px 0px 0px;
+	background-color: #212121
+}
+
+.panel-title{
+	color: white
+}
+
+#signuplink{
+	color: white
+}
+
+#signinlink{
+	margin-top:10px;
+}
