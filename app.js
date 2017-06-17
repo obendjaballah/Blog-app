@@ -68,11 +68,11 @@ app.post('/regaccount',function(req, res){
 	.then((user)=>{
 		console.log('user'+ user)
 		if(user){
-			res.send('email already exists')
+			res.send('email already registered')
 			return
 		}		
 		else if(validateEmail(email) === true && password === password_conf){
-			bcrypt.hash('password', 10, (err, hash)=> {								
+			bcrypt.hash(password, 10, (err, hash)=> {								
 				Account.create({
 					firstname: firstname,
 					lastname: lastname,
@@ -106,8 +106,10 @@ app.post('/login', (req, res)=> {
 		})
 		.then((user)=>{
 			if(user !== null){
-				bcrypt.compare('password', user.password, (err, result)=> {
+				let hash = user.password
+				bcrypt.compare(password, hash, (err, result)=> {
 					if (result === true){
+						console.log('result: '+ result)
 						req.session.user = user;
 						res.redirect('/profile')
 					}
